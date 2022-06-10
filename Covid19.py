@@ -1,12 +1,3 @@
-Covid-19 Tablosu
-Bu çalışma Patika.dev için proje amaçlı olarak T.C. Sağlık Bakanlığının Covid 2022 Mayıs verilerinden çekilerek hesaplanmıştır. #https://covid19.saglik.gov.tr/TR-66935/genel-koronavirus-tablosu.html
-
-import numpy as np
-from pandas import pandas as pd
-import matplotlib.pyplot as plt
-​
-​
-int(c1.vefat.mean())
 import pandas as pd
 from math import sqrt
 #values referances:https://covid19.saglik.gov.tr/TR-66935/genel-koronavirus-tablosu.html
@@ -21,8 +12,8 @@ clist=[]
 for i in range(l):
     z=covidt.vaka[i]
     clist.append(z)"""
-​
-​
+
+
 #Anlam düzeyi 0~50 puan arasında
 mont=int((covidt.vefat-covidt.vefat.mean()).pow(2).sum())
 filt=(covidt.vaka<=1000)
@@ -38,40 +29,9 @@ c6=c4[~filt3]
 filt4=(c6.vaka<=1750)
 c7=c6[filt4]
 c8=c6[~filt4]
-​
-print(int(c1.vefat.mean()))
-print(int(c3.vefat.mean()))
-print(int(c5.vefat.mean()))
-print(int(c7.vefat.mean()))
-print(int(c8.vefat.mean()))
-​
-'print(int(c1.vefat.mean())) #Anlam Düzeyi:\nprint(int(c3.vefat.mean())) #Anlam Düzeyi:\nprint(int(c5.vefat.mean())) #Anlam Düzeyi:\nprint(int(c7.vefat.mean())) #Anlam Düzeyi:\nprint(int(c8.vefat.mean())) #Anlam Düzeyi:'
-covidt.plot.bar(x="vefat",y="vaka",rot=0,title="Vefatların vakalar karşısında anlamlılık düzeyi")
-<AxesSubplot:title={'center':'Vefatların vakalar karşısında anlamlılık düzeyi'}, xlabel='vefat'>
-Figure 40
-covidt.plot.bar(x="vefat",y="test",rot=0,title="Vefatların testler karşısında anlamlılık düzeyi")
-<AxesSubplot:title={'center':'Vefatların testler karşısında anlamlılık düzeyi'}, xlabel='vefat'>
-Figure 41
- 
-covidt.plot.bar(x="vefat",y="iyilesen",rot=0,title="Vefatların iyilesenlere karşı anlamlılık düzeyi")
-<AxesSubplot:title={'center':'Vefatların iyilesenlere karşı anlamlılık düzeyi'}, xlabel='vefat'>
-Figure 44
-x= y=1191.
-Vefatları vaka sayıları ile kıyasladığımızda 250 artan rakamlı olarak hesap yapılmış ve ortalamalar şu şekilde bulunmuştur
 
-0-1000 vaka sayısı arasında vefat ortalaması :
-
-3
-1000-1250 vaka sayısı arasında vefat ortalaması :
-
-7
-1250-1500 vaka sayısı arasında vefat ortalaması :
-
-6
-1500-1750 vaka sayısı arasında vefat ortalaması :
-
-8
-1750 ve üzeri vaka sayısı arasında vefat ortalaması :
-
-7
-Buradan yola çıkarak vaka sayısı arttıkça vefat sayısı artmıştır yorumunun aslında anlamlı olmadığını yorumlayabiliriz.
+print(int(c1.vefat.mean())) #Anlam Düzeyi:
+print(int(c3.vefat.mean())) #Anlam Düzeyi:
+print(int(c5.vefat.mean())) #Anlam Düzeyi:
+print(int(c7.vefat.mean())) #Anlam Düzeyi:
+print(int(c8.vefat.mean())) #Anlam Düzeyi:
