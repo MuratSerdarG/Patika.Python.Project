@@ -1,3 +1,6 @@
+#Çalışmayı devam ettirmek için ham veriler.
+
+
 import pandas as pd
 from math import sqrt
 #values referances:https://covid19.saglik.gov.tr/TR-66935/genel-koronavirus-tablosu.html
